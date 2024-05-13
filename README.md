@@ -50,6 +50,8 @@ Please change the directory after cloning the repository using the `cd <folder-n
 
 > **Note:** Please do not remove and update the `application.yml` and `pom.xml` file from the resources and root folder respectively. It contains all the environment variables and dependencies required for development.
 > If needed to update then mention in the created issue with highlighting this
+ 
+> **Note** -> Increase the version of the Project from pom.xml and use that particular version in other projects to get the reflected changes
 
 ### Open Project
 
