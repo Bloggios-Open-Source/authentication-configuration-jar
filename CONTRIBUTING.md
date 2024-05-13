@@ -13,15 +13,13 @@ follow it in all your interactions with the project.
 
 ## <a name="prp"></a> Pull Request Process
 
-This document outlines the guidelines for submitting and approving pull requests (PRs) within the <project-name> repository.
+This document outlines the guidelines for submitting and approving pull requests (PRs) within the **bloggios_frontend** repository.
 
 ## PR Approval Process
 
 1. **Dependency Management**: Ensure any install or build dependencies are removed. If holding dependencies is necessary, seek approval from the project owner before finalizing the build.
 
 2. **Update README**: Update the README.md file with details of changes to the interface, including new environment variables, exposed ports, useful file locations, and container parameters.
-
-3. **Versioning**: Increase the version numbers in example files and README.md to match the new version represented by the PR. We adhere to the [SemVer](http://semver.org/) versioning scheme.
 
 4. **Review and Merge**: You may merge the Pull Request once you have received sign-off from two other developers. If you lack the permissions to merge, request the second reviewer to do so.
 
@@ -150,15 +148,13 @@ Each commit message comprises a **header**, a **body** (except for "docs" commit
 
 - **Type**: Must be one of the following:
    - build: Changes affecting the build system or external dependencies
+   - feature: Addition of new Feature
+   - bugFix: Fix for some bug
    - ci: Changes to CI configuration files and scripts
    - docs: Documentation-only changes
-   - feat: Introduction of a new feature
-   - fix: Bug fixes
    - perf: Code changes improving performance
    - refactor: Code changes not related to bug fixes or feature additions
    - test: Addition or correction of tests
-
-- **Scope**: Optional. Describes the area of the codebase affected by the commit (e.g., common, plays, infra).
 
 - **Summary**: A succinct description of the change:
    - Use imperative, present tense (e.g., "change" not "changed" or "changes")
@@ -168,13 +164,11 @@ Each commit message comprises a **header**, a **body** (except for "docs" commit
 #### <a name="commit-header"></a>Commit Message Header
 
 ```
-<type>(<scope>): <short summary>
-  │       │             │
-  │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
-  │       │
-  │       └─⫸ Commit Scope: common|plays (2048, analog-clock, basic-calculator, etc.)|infra|etc.
+<type>/<short summary>
+  │         │
+  │         └─⫸ Short description about the commit.
   │
-  └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
+  └─⫸ Commit Type: build|ci|docs|feature|bugFix|perf|refactor|test
 ```
 
 The `<type>` and `<summary>` fields are mandatory, the `(<scope>)` field is optional.
@@ -199,43 +193,6 @@ Use the summary field to provide a succinct description of the change:
 * use the imperative, present tense: "change" not "changed" nor "changes"
 * don't capitalize the first letter
 * no dot (.) at the end
-
-#### <a name="commit-body"></a>Commit Message Body
-
-- Use imperative, present tense in the body (e.g., "fix" not "fixed" or "fixes").
-- Explain the motivation behind the change and its impact, comparing previous behavior with the new behavior if necessary.
-
-
-#### <a name="commit-footer"></a>Commit Message Footer
-
-- Optional. May contain information about breaking changes, deprecations, and references to related issues, tickets, or pull requests.
-- Example:
-
-```
-BREAKING CHANGE: <breaking change summary>
-<BLANK LINE>
-<breaking change description + migration instructions>
-<BLANK LINE>
-<BLANK LINE>
-Fixes #<issue number>
-```
-
-or
-
-```
-DEPRECATED: <what is deprecated>
-<BLANK LINE>
-<deprecation description + recommended update path>
-<BLANK LINE>
-<BLANK LINE>
-Closes #<pr number>
-```
-
-Breaking Change section should start with the phrase "BREAKING CHANGE: " followed by a summary of the breaking change, a
-blank line, and a detailed description of the breaking change that also includes migration instructions.
-
-Similarly, a Deprecation section should start with "DEPRECATED: " followed by a short description of what is deprecated,
-a blank line, and a detailed description of the deprecation that also mentions the recommended update path.
 
 ### Revert commits
 
