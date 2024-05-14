@@ -100,4 +100,14 @@ public class JwtDecoderUtil {
             throw new AuthenticationConfigException("Unable to extract Client IP from the Token");
         }
     }
+
+    public String extractUsername(String token) {
+        try {
+            Jwt jwt = jwtDecoder.decode(token);
+            return jwt.getClaimAsString("username");
+        } catch (Exception e) {
+            logger.error("Exception Occurred while extracting Username from token with default message as : {}", e.getMessage());
+            throw new AuthenticationConfigException("Unable to extract Username from the Token");
+        }
+    }
 }

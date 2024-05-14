@@ -49,4 +49,5 @@ public class AuthenticatedUser {
     private Collection<? extends GrantedAuthority> authorities;
     private String email;
     private String clientIp;
+    public String username;
 }
